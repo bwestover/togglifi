@@ -1,0 +1,3 @@
+unificontrol==0.2.9
+flask==2.3.2
+gunicorn==21.2.0
