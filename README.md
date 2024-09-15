@@ -1,8 +1,8 @@
 # togglifi
 
-Toggle a Wi-Fi network on/off in a Unifi Controller managed network.
+Toggle Wi-Fi networks on/off in a Unifi Controller managed network.
 
-Includes a basic Flask UI and an API for enabling/disabling a single Wi-FI network using the unificontrol Python package.
+Includes a basic Flask UI and an API for enabling/disabling selected Wi-FI networks using the unificontrol Python package.
 
 ### Build using an ENV file
 
@@ -11,10 +11,9 @@ Includes a basic Flask UI and an API for enabling/disabling a single Wi-FI netwo
    ```
    UNIFI_HOST=<ip or hostname for your Unifi controler>
    UNIFI_PW=<unifi admin password>
-   UNIFI_WLAN_ID=<wlan ID for the network you want to toggle>
+   MANAGED_NETWORK_IDS=<comma separate list of SSID/network names you want to manage>
    ```
 
-   Todo: I should create a tool/docs for determining the `UNIFI_WLAN_ID`. I got it using the `unificontrol` package locally
 
 2. Build docker container:
 
