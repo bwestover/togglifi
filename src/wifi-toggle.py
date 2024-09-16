@@ -19,9 +19,7 @@ def wifi_status(wifi_name = None):
 def wifi_enable(wifi_name):
     wlan_id = _network_id(wifi_name)
     if wlan_id:
-      # ToDo: take out this debug line
-      print(f"Debug: Would call enable_wlan on ID: {wlan_id}")
-      #wifi_client.enable_wlan(wlan_id, True)
+      wifi_client.enable_wlan(wlan_id, True)
     else:
       return f"Error: wifi_name ({wifi_name}) not found\n", 404
     return '', 204
@@ -30,9 +28,7 @@ def wifi_enable(wifi_name):
 def wifi_disable(wifi_name):
     wlan_id = _network_id(wifi_name)
     if wlan_id:
-      # ToDo: take out this debug line
-      print(f"Debug: Would call enable_wlan(False) on ID: {wlan_id}")
-      #wifi_client.enable_wlan(wlan_id, False)
+      wifi_client.enable_wlan(wlan_id, False)
     else:
       return f"Error: wifi_name ({wifi_name}) not found\n", 404
     return '', 204
